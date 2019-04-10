@@ -1,0 +1,28 @@
+<view class='form-box'>
+    <view class='form-item'>
+      <view class='form-title'>
+        所在城市
+      </view>
+      <view class='form-arrow' bindtap='showModal' data-modal="singleModal">
+        {{citySelect ? citySelect : '选择城市'}}
+      </view>
+      <view class="modal-box {{modalName=='singleModal'?'cur':''}}">
+        <view class='modal-dialog'>
+          <view class="modal-title">
+            <text>选择城市</text>
+          </view>
+          <scroll-view class='modal-bd' scroll-y="true" style='max-height:800rpx;'>
+            <view class='single-modal'>
+              <view class="single-modal-item {{item.checked?'cur':''}}" id="{{index}}" data-name="{{item.name}}" data-id="{{item.cid}}" wx:for="{{cityArr}}" bindtap='radioChange' wx:key>
+              {{item.name}}
+              </view>
+            </view>
+          </scroll-view>
+          <view class='modal-option'>
+            <view class='modal-option-btn' bindtap='closeModal'>取消</view>
+            <view class='modal-option-btn success-text' bindtap='closeModal'>确认</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
