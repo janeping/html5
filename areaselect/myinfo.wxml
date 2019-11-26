@@ -3,7 +3,7 @@
       <view class='form-title'>
         所在城市
       </view>
-      <view class='form-arrow' bindtap='showModal' data-modal="singleModal">
+      <view class='form-arrow' bindtap='radioChange' data-modal="singleModal">
         {{citySelect ? citySelect : '选择城市'}}
       </view>
       <view class="modal-box {{modalName=='singleModal'?'cur':''}}">
