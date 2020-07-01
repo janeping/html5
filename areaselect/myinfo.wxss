@@ -1,4 +1,22 @@
 /* pages/myinfo/myinfo.wxss */
+.form-title{
+    width: 200rpx;
+    padding:8rpx 12rpx;
+    margin: 0 auto;
+    background-color: #666;
+    border: 1px solid #ddd;
+    color:#fff;
+    text-align: center;
+}
+.form-arrow{
+    width: 200rpx;
+    margin: 20rpx auto;
+    padding:8rpx 12rpx;
+    background-color: #666;
+    border: 1px solid #ddd;
+    color:#fff;
+    text-align: center;
+}
 .modal-box {
     position: fixed;
     top: 0;
@@ -41,30 +59,30 @@
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    width: 680 rpx;
+    width: 680rpx;
     max-width: 100%;
     background: #f8f8f8;
-    border-radius: 10 rpx;
+    border-radius: 10rpx;
     overflow: hidden
 }
 
 .modal-title {
-    padding: 20 rpx;
-    font-size: 32 rpx;
+    padding: 20rpx;
+    font-size: 32rpx;
     background: #fff;
-    margin-bottom: 1 rpx;
-    line-height: 60 rpx
+    margin-bottom: 1rpx;
+    line-height: 60rpx
 }
 
 .modal-close {
-    width: 60 rpx;
-    height: 45 rpx;
+    width: 60rpx;
+    height: 45rpx;
     position: absolute;
     background: #f83d2a;
     color: #fff;
-    top: 0 rpx;
-    right: 0 rpx;
-    border-bottom-left-radius: 10 rpx
+    top: 0rpx;
+    right: 0rpx;
+    border-bottom-left-radius: 10rpx
 }
 
 .modal-bd {
@@ -80,17 +98,17 @@
     background: #fff;
     display: flex;
     text-align: center;
-    border-top: 1 rpx solid #eee;
+    border-top: 1rpx solid #eee;
     align-items: center
 }
 
 .modal-option-btn {
     flex: 1;
-    line-height: 100 rpx
+    line-height: 100rpx
 }
 
 .modal-option-btn + .modal-option-btn {
-    border-left: 1 rpx solid #eee
+    border-left: 1rpx solid #eee
 }
 
 .modal-box.bottom-modal::before {
@@ -113,18 +131,18 @@
 .single-modal {
     background: #fff;
     text-align: center;
-    padding: 20 rpx
+    padding: 20rpx
 }
 
 .single-modal-item {
     background: #f5f5f5;
     float: left;
-    margin-bottom: 20 rpx;
+    margin-bottom: 20rpx;
     border-radius: 3px;
-    line-height: 36 rpx;
-    padding: 20 rpx;
+    line-height: 36rpx;
+    padding: 20rpx;
     text-align: center;
-    font-size: 32 rpx;
+    font-size: 32rpx;
     width: 32%;
     text-overflow: ellipsis;
     white-space: nowrap;
