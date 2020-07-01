@@ -6,7 +6,7 @@ Page({
    */
   data: {
     citySelect:'',
-    cityArr:{cid: "1", name: "常州"}, {cid: "2", name: "无锡"}, {cid: "3", name: "泰州"}, {cid: "4", name: "南通"}],
+    cityArr:[{cid: "1", name: "常州",'checked':false}, {cid: "2", name: "无锡",'checked':false}, {cid: "3", name: "泰州",'checked':false}, {cid: "4", name: "南通",'checked':false}],
     cityId:'',
   },
 
@@ -22,21 +22,15 @@ Page({
    */
   onShow: function () {
     var that = this;
-    that.getCityArr();
-  },
-  closeModal: function (e) {
-    this.setData({
-      modalName: null
-    })
   },
   //选择城市
-  radioChange:function(e){
+  radioChangebtn(e){
     var that = this;
     var cityArrlen = that.data.cityArr.length; 
     var currentIndex = e.currentTarget.id;
     var cityName = e.currentTarget.dataset.name;
     var cityId = e.currentTarget.dataset.id;
-    //console.log(cityId);
+    console.log(e);
     that.setData({
       citySelect: cityName,
       cityId: cityId
@@ -53,17 +47,16 @@ Page({
       cityArr: that.data.cityArr
     })
   },
-  /**报错提示 */
-  showerrorModal: function (msg) {
-    var showName = 'errormodal';
+  /*显示弹窗*/
+  radioChange: function () {
+    let showName = 'singleModal';
     this.setData({
-      errorMsg: msg,
       modalName: showName
     })
   },
-  closeerrorModal: function (e) {
+  //关闭弹窗
+  closeModal: function (e) {
     this.setData({
-      errorMsg: '',
       modalName: null
     })
   },
